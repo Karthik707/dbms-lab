@@ -45,3 +45,5 @@ insert into book_lending values(40,300,205,'2017-02-01','2020-09-10');
 select b.book_id,title,publisher_name,author_name,no_of_copies from book b,book_authors ba,book_copies bc where b.book_id=ba.book_id and bc.book_id=b.book_id;
 select card_no from book_lending where date_out between '2017-01-01' and '2017-06-01' group by card_no having count(card_no>3);
 delete from book where book_id=20;
+select branch_id,sum(no_of_copies) from book_copies group by branch_id;
+select branch_id,sum(no_of_copies) from book_copies group by branch_id;
