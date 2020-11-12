@@ -47,3 +47,4 @@ select card_no from book_lending where date_out between '2017-01-01' and '2017-0
 delete from book where book_id=20;
 select branch_id,sum(no_of_copies) from book_copies group by branch_id;
 select branch_id,sum(no_of_copies) from book_copies group by branch_id;
+select branch_id,sum(no_of_copies) "totoal_copies" from book_copies group by branch_id;
